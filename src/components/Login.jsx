@@ -1,5 +1,4 @@
 import React from "react"
-import { useNavigate } from "react-router-dom"
 import Header from "./Header"
 import { checkValidData  } from "../utils/validate"
 import netflixbanner from "../assets/images/netflixbanner.jpg"
@@ -7,6 +6,8 @@ import {auth} from "../utils/firebase"
 import { createUserWithEmailAndPassword ,  signInWithEmailAndPassword ,updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux"
 import { addUser } from "../utils/userSlice"
+import seal from "../assets/images/seal.webp"
+
 
 
 
@@ -14,7 +15,6 @@ export default function Login(){
 
     const [isSignInForm , setIsSignInForm] = React.useState(true)
     const [errorMessage , setErrorMessage] = React.useState(null)
-    const navigate = useNavigate()
     const dispatch = useDispatch()
     
 
@@ -44,7 +44,7 @@ export default function Login(){
                     console.log(user)
                     updateProfile(user, {
                     displayName: name.current.value,
-                     photoURL: "https://avatars.githubusercontent.com/u/216266260?v=4"
+                     photoURL: seal
                     })
                     .then(() => {
                         // Profile updated!
@@ -53,8 +53,7 @@ export default function Login(){
                             email:email ,
                             displayName:displayName ,
                             photoURL:photoURL })
-                        )  
-                        navigate("/browse")                   
+                        )                    
                     })
                     // .catch((error) => {
                     //     // An error occurred
@@ -77,7 +76,6 @@ export default function Login(){
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    navigate("/browse")
                     // ...
                 })
                 .catch((error) => {
