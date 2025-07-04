@@ -13,7 +13,6 @@ import {addNowPlayingMovies} from "../utils/movieSlice"
                     API_OPTIONS
                     );
                 const json = await data.json();
-                console.log(json)
                 dispatch(addNowPlayingMovies(json.results))
             }catch(error){
                 console.error(error)

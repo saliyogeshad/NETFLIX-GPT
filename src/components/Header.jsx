@@ -48,14 +48,14 @@ export default function Header(){
     },[])
 
     return (
-        <div className="w-screen bg-gradient-to-b from-black flex justify-between ">
+        <div className="w-screen bg-gradient-to-b from-black flex justify-between absolute ">
 
             <div className="overflow-hidden">
             <img className="w-45 z-10 -mt-10 h-45 mx-10 object-cover" 
                 src={netflixlogo} alt="Netflix Logo" />
             </div>
 
-            {user&&(<div className="flex mx-2 ">
+            {user&&(<div className="flex mx-4 ">
             <img className="h-13 w-13 my-8 mx-2 rounded border border-red-500"
                 src={ user?.photoURL }
                     alt="profile icon " />                 

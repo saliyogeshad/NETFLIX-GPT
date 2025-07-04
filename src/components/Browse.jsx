@@ -8,7 +8,7 @@ export default function Browse(){
     
     useNowPlayingMovies() 
    
-    return <div className="bg-white h-screen w-screen ">
+    return <div className="bg-black h-full w-full ">
                <div className=" "> 
                     <Header/>
                     <MainContainer/>

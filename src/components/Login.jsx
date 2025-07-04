@@ -41,7 +41,6 @@ export default function Login(){
             createUserWithEmailAndPassword(auth, email.current.value , password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(user)
                     updateProfile(user, {
                     displayName: name.current.value,
                      photoURL: seal
