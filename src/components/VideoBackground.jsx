@@ -8,10 +8,11 @@ export default function VideoBackground( {movieId} ) {
    useMovieTrailer(movieId)
 
     return (
-        <div className="w-screen ">
+        <div className="overflow-hidden w-full h-screen flex justify-center items-center ">
             <iframe 
-            className="w-full aspect-video " 
-            src= {`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1`}
+            className="w-[120%] h-[120%]  object-cover top-[-5%] left-[-5%] bottom-[-5%] right-[-5%] aspect-video  " 
+            //add pointer-events-none above
+            src= {`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1`} //&mute=1 add this to auto play
             title="YouTube video player"  
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  
             >

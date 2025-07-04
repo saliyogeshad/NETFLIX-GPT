@@ -10,3 +10,5 @@ export const API_OPTIONS = {
 export function randonIndex(variable){
     return  Math.floor(Math.random() * variable.length) 
 }
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"

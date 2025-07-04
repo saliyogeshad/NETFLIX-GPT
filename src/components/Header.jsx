@@ -48,7 +48,7 @@ export default function Header(){
     },[])
 
     return (
-        <div className="w-screen bg-gradient-to-b from-black flex justify-between absolute ">
+        <div className="w-screen bg-gradient-to-b from-black flex justify-between absolute">
 
             <div className="overflow-hidden">
             <img className="w-45 z-10 -mt-10 h-45 mx-10 object-cover" 
