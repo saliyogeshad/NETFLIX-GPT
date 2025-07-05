@@ -12,3 +12,35 @@ export function randonIndex(variable){
 }
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"
+
+export const SearchIcon = () => {
+        return (
+            <svg width="40" height="40" viewBox="0 0 100 100" className="">
+            <circle
+                cx="40"
+                cy="40"
+                r="20"
+                stroke="#333"
+                strokeWidth="5"
+                fill="none"
+                className="search-circle"
+            />
+            <line
+                x1="55"
+                y1="55"
+                x2="80"
+                y2="80"
+                stroke="#333"
+                strokeWidth="5"
+                className="search-line "
+            />
+            </svg>
+        );
+        };
+
+
+export const SUPPORTED_LANGUAGES = [
+    {identifier: 'en', name: 'English'},
+    {identifier: 'hi', name: 'Hindi'},
+    {identifier: 'es', name: 'Spanish'},
+]
